@@ -31,9 +31,11 @@
 
 ## Database Schema Diagram
 
+![data-schema](https://photos.app.goo.gl/9gkUvx1HXVUs76i48)
 ## Design Prep
 
 ![wtf-wireframe](https://user-images.githubusercontent.com/123340286/226435021-4f1298ec-3626-4a21-b914-e67832bcad8b.jpg)
+![wtf-UML](https://drive.google.com/file/d/1_cJr6K6Z0BNZcmB-kuf2clq4F_JUdtbI/view?usp=sharing)
 
 ## Change Log
 
