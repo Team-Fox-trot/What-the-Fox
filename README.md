@@ -14,6 +14,13 @@
 * The user will have the ability to save, update, and delete their collection of fox memes.
 * The user is encouraged to think outside the box, but never outside the fox ;)
 
+## User Stories
+* As user I want to be able to see a bunch of fox images, pick the one I want to add text to and add text to that image. 
+* As user I want to see my collection of fox meme's that I've saved.
+* As a user, I want to select a fox meme that I have created and edit that fox meme. 
+* As a user, I want to be able to delete fox meme's that I no longer want to save. 
+* As a user, I want to have to login in order to see my personal collection as well as edit it.
+
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
