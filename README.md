@@ -1,27 +1,35 @@
 # What the Fox
 
-## Author
+## Author: Team Foxtrot
 
-- Trey Young
-- Laurel Perkins
-- Thomas Lau
-- Abshir Ibrahim
+* Abshir Ibrahim
+* Thomas Lau
+* Laurel Perkins
+* Trey Young
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+
+* Fox meme creator, complete with fun fox puns and relevant css stylization
+* Using the Random Fox API, this app will generate a random image of a fox, which the user can than add text to in the format of a classic meme.
+* The user will have the ability to save, update, and delete their collection of fox memes.
+* The user is encouraged to think outside the box, but never outside the fox ;)
+
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-## Change Log
 
-## Domain Modeling
-
-## User Stories
+* API: <https://randomfox.ca/floof/>
+* React Bootstrap components used: Card probably, update this later
+* Languages used: Javascript, CSS
 
 ## Database Schema Diagram
 
+## Design Prep
+
+## Change Log
+
 ## Links and Resources
 
-- [submission PR](http://xyz.com)
-- Any Links you used as reference
+* [submission PR](http://xyz.com)
+* Any Links you used as reference
