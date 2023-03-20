@@ -1,6 +1,11 @@
 # What the Fox
 
-## Author: Student/Group Name
+## Author
+
+- Trey Young
+- Laurel Perkins
+- Thomas Lau
+- Abshir Ibrahim
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -18,5 +23,5 @@
 
 ## Links and Resources
 
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
+- [submission PR](http://xyz.com)
+- Any Links you used as reference
