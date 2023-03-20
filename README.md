@@ -15,11 +15,10 @@
 * The user is encouraged to think outside the box, but never outside the fox ;)
 
 ## User Stories
-* As user I want to be able to see a bunch of fox images, pick the one I want to add text to and add text to that image. 
-* As user I want to see my collection of fox meme's that I've saved.
-* As a user, I want to select a fox meme that I have created and edit that fox meme. 
-* As a user, I want to be able to delete fox meme's that I no longer want to save. 
-* As a user, I want to have to login in order to see my personal collection as well as edit it.
+* As a user, I want to be able to see a collection of fox images, pick the one I want to add text to, then add text to that image. 
+* As a user, I want to be able to login and see the collection of fox memes I've saved.
+* As a user, I want to select a fox meme that I have created, and then edit that fox meme. 
+* As a user, I want to be able to delete fox memes that I no longer want saved to my collection. 
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -27,7 +26,7 @@
 ## Architecture
 
 * API: <https://randomfox.ca/floof/>
-* React Bootstrap components used: Card probably, update this later
+* React Bootstrap components used: Carousel, Card probably, update this later
 * Languages used: Javascript, CSS
 
 ## Database Schema Diagram
