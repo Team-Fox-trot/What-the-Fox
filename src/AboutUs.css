@@ -39,3 +39,71 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
     transform: translateY(-100%);
   }
 }
+
+/* card styling 
+reference: <https://www.w3schools.com/css/css3_gradients.asp> */
+
+#bio-cards {
+	display: flex;
+	flex-direction: column;
+}
+
+#thomas {
+	margin: 1rem;
+	background-image: linear-gradient(to top, red, yellow);
+}
+
+#tom-button {
+	background-color: yellow;
+	border-color: rgb(253, 253, 74);
+	color: black
+}
+
+#tom-button:hover {
+	background-color: rgb(255, 196, 0);
+}
+
+#laurel {
+	margin: 1rem;
+	background-image: linear-gradient(to top, rgb(245, 32, 103), yellow);
+}
+
+#laurel-button {
+	background-color: yellow;
+	border-color: rgb(253, 253, 74);
+	color: black;
+}
+
+#laurel-button:hover {
+	background-color: rgb(255, 196, 0);
+}
+
+#abshir {
+	margin: 1rem;
+	background-image: linear-gradient(to top, rgb(107, 28, 197), yellow);
+}
+
+#abshir-button {
+	background-color: yellow;
+	border-color: rgb(253, 253, 74);
+	color: black;
+}
+
+#abshir-button:hover {
+	background-color: rgb(255, 196, 0);
+}
+
+#trey {
+	margin: 1rem;
+	background-image: linear-gradient(to top, rgb(7, 9, 170), yellow);
+}
+
+#trey-button {
+	background-color: yellow;
+	border-color: rgb(253, 253, 74);
+	color: black;
+}
+
+#trey-button:hover {
+	background-color: rgb(255, 196, 0);
+}
