@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-
 import Header from './Header';
 import Footer from './Footer';
 import FoxCarousel from './FoxCarousel';
 import Main from './Main';
+import './Header.css'
 import Favorites from './Favorites';
 import Aboutus from './AboutUs'
+
 import './App.css';
 import {
   BrowserRouter as Router,
