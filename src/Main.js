@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Carousel from './Carousel';
+
 class Main extends React.Component {
   constructor(props) {
     super(props);
