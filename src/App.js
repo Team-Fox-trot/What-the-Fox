@@ -6,6 +6,8 @@ import Footer from './Footer';
 import Main from './Main';
 import './App.css';
 
+import { Carousel, Button } from 'react-bootstrap';
+
 const SERVER = process.env.REACT_APP_SERVER;
 
 class App extends React.Component {
@@ -137,6 +139,17 @@ class App extends React.Component {
   }
 
   render() {
+
+    // this will probably be moved to carousel component?
+    let carouselItems = this.state.foxMemes.map((updatedArrayOfMemes) => {
+      return (
+
+
+        <Carousel.Item key={foxMeme._id}>
+          <img
+            ???
+          />
+
     return (
       <>
         <p>this is from app.js</p>
