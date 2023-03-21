@@ -10,11 +10,12 @@ class Main extends React.Component {
     }
   }
   render() {
+    console.log(this.props.allFoxes[0])
     return (
       <>
         <p>this is from main.js</p>
 
-        <FoxCarousel allFoxes = {this.props.allFoxes}/>
+        <FoxCarousel allFoxes={this.props.allFoxes} userInput={this.props.userInput}/>
       </>
     )
   }
