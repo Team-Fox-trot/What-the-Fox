@@ -21,7 +21,6 @@ class Header extends React.Component {
           </Nav>
         </Container>
       </Navbar>
-      <p>header testing</p>
       {/* <Login />
       <Logout /> */}
       </>
