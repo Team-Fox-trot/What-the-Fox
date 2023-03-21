@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
-import FoxCarousel from './FoxCarousel';
 import Main from './Main';
 import './Header.css'
 import Favorites from './Favorites';
@@ -16,7 +15,11 @@ import {
 } from "react-router-dom";
 
 
-const SERVER = process.env.REACT_APP_SERVER;
+class FoxPictures {
+  constructor(foxObj){
+    this.src = foxObj.image;  
+  }
+}
 
 class App extends React.Component {
 
@@ -25,6 +28,7 @@ class App extends React.Component {
     this.state = {
       allFoxes: [],
       foxMemes: [],
+      userInput: ''
     }
   }
 
@@ -32,16 +36,18 @@ class App extends React.Component {
   getFoxes = async () => {
     try {
       let results = await axios.get(`https://randomfox.ca/floof/`);
-      return results.data.image
+      let newFoxPic = new FoxPictures(results.data);
+      console.log(results);
+      return newFoxPic;
     } catch (error) {
       console.log('Error:', error.response.data)
     }
   }
 
-  fiveRandomFoxes = () => {
+  fiveRandomFoxes = async () => {
     let randomFoxesArray = [];
     while (randomFoxesArray.length < 5) {
-      let randomFox = this.getFoxes();
+      let randomFox =  await this.getFoxes();
       randomFoxesArray.push(randomFox);
     }
     this.setState({
@@ -122,12 +128,17 @@ class App extends React.Component {
         <Router>
           <Header />
           <Routes>
+            {this.state.allFoxes.length > 0 &&
+            <>
             <Route
             exact path="/"
             element={<Main 
-              allFoxes = {this.state.allFoxes}
+              allFoxes={this.state.allFoxes}
+              userInput={this.state.userInput}
             />}>
             </Route>
+            </>
+            }
 
             <Route
             exact path="/favorites"
