@@ -11,13 +11,15 @@ class Main extends React.Component {
     }
   }
   render() {
+    console.log(this.props.allFoxes[0])
     return (
       <>
         <Container>
-          <FoxCarousel allFoxes={this.props.allFoxes} />
-          </Container>
-        </>
+          <FoxCarousel allFoxes={this.props.allFoxes} userInput={this.props.userInput}/>
+         </Container>
+       </>
         )
+
   }
 }
 
