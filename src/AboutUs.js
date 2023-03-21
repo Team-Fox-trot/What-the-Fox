@@ -40,7 +40,7 @@ class AboutUs extends React.Component {
                   <Button 
                   id="laurel-button"
                   variant="primary" src="https://github.com/gone-explauren">
-                    Git At Me !
+                    Check Out My Github
                   </Button>
                 </Card.Body>
               </Card>
@@ -54,7 +54,7 @@ class AboutUs extends React.Component {
                   <Button 
                   id="abshir-button"
                   variant="primary" src="https://github.com/abshir206">
-                    Find Me on GitHub
+                    Check Out My Github
                   </Button>
                 </Card.Body>
               </Card>
@@ -72,7 +72,7 @@ class AboutUs extends React.Component {
                   <Button
                   id="trey-button"
                   variant="primary" src="https://github.com/goodpudding">
-                    My Github
+                    Check Out My Github
                   </Button>
                 </Card.Body>
               </Card>
