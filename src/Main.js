@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Carousel from './Carousel';
+import FoxCarousel from './FoxCarousel';
 
 class Main extends React.Component {
   constructor(props) {
@@ -13,7 +13,8 @@ class Main extends React.Component {
     return (
       <>
         <p>this is from main.js</p>
-        <Carousel />
+
+        <FoxCarousel allFoxes = {this.props.allFoxes}/>
       </>
     )
   }
