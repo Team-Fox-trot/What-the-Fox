@@ -11,9 +11,9 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   
-  -moz-animation: my-animation 25s linear infinite;
-  -webkit-animation: my-animation 25s linear infinite;
-  animation: my-animation 25s linear infinite;
+  -moz-animation: my-animation 35s linear infinite;
+  -webkit-animation: my-animation 35s linear infinite;
+  animation: my-animation 35s linear infinite;
 }
 /* for Firefox */
 @-moz-keyframes my-animation {
@@ -51,12 +51,14 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 #thomas {
 	margin: 1rem;
 	background-image: linear-gradient(to top, red, yellow);
+	font-weight: bold;
 }
 
 #tom-button {
 	background-color: yellow;
 	border-color: rgb(253, 253, 74);
-	color: black
+	color: black;
+	font-weight: bold;
 }
 
 #tom-button:hover {
@@ -66,12 +68,14 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 #laurel {
 	margin: 1rem;
 	background-image: linear-gradient(to top, rgb(245, 32, 103), yellow);
+	font-weight: bold;
 }
 
 #laurel-button {
 	background-color: yellow;
 	border-color: rgb(253, 253, 74);
 	color: black;
+	font-weight: bold;
 }
 
 #laurel-button:hover {
@@ -81,12 +85,14 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 #abshir {
 	margin: 1rem;
 	background-image: linear-gradient(to top, rgb(107, 28, 197), yellow);
+	font-weight: bold;
 }
 
 #abshir-button {
 	background-color: yellow;
 	border-color: rgb(253, 253, 74);
 	color: black;
+	font-weight: bold;
 }
 
 #abshir-button:hover {
@@ -95,13 +101,15 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 
 #trey {
 	margin: 1rem;
-	background-image: linear-gradient(to top, rgb(7, 9, 170), yellow);
+	background-image: linear-gradient(to top, rgb(51, 53, 172), yellow);
+	font-weight: bold;
 }
 
 #trey-button {
 	background-color: yellow;
 	border-color: rgb(253, 253, 74);
 	color: black;
+	font-weight: bold;
 }
 
 #trey-button:hover {
