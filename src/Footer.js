@@ -1,12 +1,19 @@
 import React from 'react';
+import './Footer.css'
 
 
 class Footer extends React.Component {
   render() {
     return (
-      <p>footer</p> 
+      <>
+        <div>
+          <p className='p'>footer</p>
+          <img className='Grass' src='/Assests/GrassBottom.png' alt='' />
+        </div>
+      </>
+      
     )
-  }
+  };
 }
 
-export default Footer;
+export default Footer;  
