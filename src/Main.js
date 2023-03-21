@@ -1,6 +1,7 @@
 import React from 'react';
-import Favorites from './Favorites';
+
 import Carousel from './Carousel';
+
 class Main extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +13,6 @@ class Main extends React.Component {
     return (
       <>
         <p>this is from main.js</p>
-        <Favorites />
         <Carousel />
       </>
     )
