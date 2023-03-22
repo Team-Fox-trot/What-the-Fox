@@ -1,6 +1,8 @@
 
 #button-section {
 	background-color: rgb(204,88,3);
+	display: flex;
+	justify-content: center;
 }
 
 #music-button {
@@ -8,6 +10,8 @@
 	border-color: rgb(255,193,94);
 	color: rgb(31,19,0);
 	font-weight: bold;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
 }
 
 #music-button:hover {
@@ -20,15 +24,18 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
 #scroll-container {
 	overflow: hidden;
 	background-color: rgb(204,88,3);
+	position: relative;
 }
 
-#fade {
+/* fade out at top */
+#scroll-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	z-index: 99;
 	width: 100%;
-	background-image: linear-gradient (
-		transparent 12%
-		rgb(204,88,3) 30%
-		rgb(204,88,3) 70%
-		transparent 86%
+	height: 4rem;
+	background: linear-gradient(180deg, rgb(204,88,3) 0%, transparent 100%
 	);
 }
 
@@ -38,16 +45,17 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   
-  -moz-animation: my-animation 45s linear infinite;
+  /* -moz-animation: my-animation 45s linear infinite;
   -webkit-animation: my-animation 45s linear infinite;
-  animation: my-animation 45s linear infinite;
+  animation: my-animation 45s linear infinite; */
 
 	/* // Use this instead if music is playing, or as more content is added to credits:
-	// song duration: 1min 42s
+	// song duration: 1min 42s */
 	-moz-animation: my-animation 102s linear infinite;
   -webkit-animation: my-animation 102s linear infinite;
-  animation: my-animation 102s linear infinite; */
+  animation: my-animation 102s linear infinite;
 }
+
 /* for Firefox */
 @-moz-keyframes my-animation {
   from { -moz-transform: translateY(100%); }
@@ -62,9 +70,9 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
 
 @keyframes my-animation {
   from {
-    -moz-transform: translateY(100%);
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
+    -moz-transform: translateY(15%);
+    -webkit-transform: translateY(15%);
+    transform: translateY(15%);
   }
   to {
     -moz-transform: translateY(-100%);
@@ -82,6 +90,30 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	align-items: center;
 }
 
+#wdtfs-gif-1 {
+	margin-bottom: 25rem;
+}
+
+#wdtfs-gif-2 {
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
+#wdtfs-gif-3 {
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
+#wdtfs-gif-4 {
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
+#wdtfs-gif-5 {
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
 #thomas {
 	width: 40rem;
 	margin: 1rem;
@@ -95,6 +127,7 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	border-color: rgb(255,193,94);
 	color: rgb(31,19,0);
 	font-weight: bold;
+	margin-left: 13rem;
 }
 
 #tom-button:hover {
@@ -114,6 +147,7 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	border-color: rgb(255,193,94);
 	color: rgb(31,19,0);
 	font-weight: bold;
+	margin-left: 13rem;
 }
 
 #laurel-button:hover {
@@ -133,6 +167,7 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	border-color: rgb(255,193,94);
 	color: rgb(31,19,0);
 	font-weight: bold;
+	margin-left: 13rem;
 }
 
 #abshir-button:hover {
@@ -152,6 +187,7 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	border-color: rgb(255,193,94);
 	color: rgb(31,19,0);
 	font-weight: bold;
+	margin-left: 13rem;
 }
 
 #trey-button:hover {
