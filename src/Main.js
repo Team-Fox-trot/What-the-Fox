@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 
 import FoxCarousel from './FoxCarousel';
 
@@ -12,12 +13,12 @@ class Main extends React.Component {
   render() {
     return (
       <>
-        <p>this is from main.js</p>
-
+        <Container>
         <FoxCarousel allFoxes={this.props.allFoxes} userInput={this.props.userInput} handleFoxSubmit ={this.props.handleFoxSubmit} handleOnChange={this.props.handleOnChange}/>
+         </Container>
       </>
     )
   }
 }
 
-export default Main;
+        export default Main;
