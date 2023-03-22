@@ -61,7 +61,7 @@ class App extends React.Component {
     this.setState({
       foxMemes: foxMemesFromDB,
     })
-    console.log(this.state.foxMemes);
+    // console.log(this.state.foxMemes);
   };
 
   deleteFoxMeme = async (id) => {
@@ -69,16 +69,20 @@ class App extends React.Component {
       let url = `${process.env.REACT_APP_SERVER}/foxMemes/${id}`;
       await axios.delete(url);
       this.foxFromDBtoFav();
-      // let updatedArrayOfMemes = this.state.books.filter(foxMeme => foxMeme._id !== id);
-
-      // this.setState({
-      //   foxMemes: updatedArrayOfMemes
-      // });
-
     } catch (error) {
 
       console.log('Error: ', error.response.data)
 
+    }
+  }
+
+  updateFoxMeme = async (updateFox) => {
+    try {
+      let updatedFoxFromDB = await axios.put(`${process.env.REACT_APP_SERVER}/foxMemes/${updateFox._id}`, updateFox);
+      console.log(updatedFoxFromDB.data);
+      this.foxFromDBtoFav();
+    } catch (error) {
+      console.log('error msg: ', error.response.data)
     }
   }
 
@@ -94,40 +98,9 @@ class App extends React.Component {
       console.log('Error: ', error.response.data)
     }
   }
-
- 
-   
-
- 
-  updateFoxMeme = async (memeToUpdate) => {
-    try {
-      let updatedMemeFromDatabase = await axios.put(`${process.env.REACT_APP_SERVER}/foxMemes/${memeToUpdate._id}`, memeToUpdate);
-
-      let updatedMemes = this.state.foxMemes.map((meme) => {
-
-        return foxMeme._id === memeToUpdate._id
-          ?
-          updatedMemeFromDatabase.data
-          :
-          meme
-      });
-      
-      this.setState({
-        foxMemes: updatedMemes
-      });
-
-    } catch (error) {
-      this.setState({
-        error: true,
-        errorMessage: 'Error',
-      });
-      console.log(error)
-    }
-  }
 */
   componentDidMount() {
     this.fiveRandomFoxes();
-    // this.foxFromDBtoFav();
   }
 
   render() {
@@ -153,8 +126,9 @@ class App extends React.Component {
             <Route
             exact path="/favorites"
             element={<Favorites
-              foxMemes={this.state.foxMemes}
+              foxMemes={this.state.foxMemes} 
               deleteFoxMeme={this.deleteFoxMeme}
+              updateFoxMeme={this.updateFoxMeme}
               foxFromDBtoFav={this.foxFromDBtoFav}
             />}>
             </Route>
