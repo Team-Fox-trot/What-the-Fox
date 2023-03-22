@@ -1,9 +1,35 @@
+
+#button-section {
+	background-color: rgb(204,88,3);
+}
+
+#music-button {
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
+}
+
+#music-button:hover {
+	background-color: rgb(255, 196, 0);
+}
+
 /* credits scroll
 reference: <https://blog.hubspot.com/website/scrolling-text-css> */
 
 #scroll-container {
-  overflow: hidden;
+	overflow: hidden;
 	background-color: rgb(204,88,3);
+}
+
+#fade {
+	width: 100%;
+	background-image: linear-gradient (
+		transparent 12%
+		rgb(204,88,3) 30%
+		rgb(204,88,3) 70%
+		transparent 86%
+	);
 }
 
 #scroll-text {
@@ -15,6 +41,12 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
   -moz-animation: my-animation 45s linear infinite;
   -webkit-animation: my-animation 45s linear infinite;
   animation: my-animation 45s linear infinite;
+
+	/* // Use this instead if music is playing, or as more content is added to credits:
+	// song duration: 1min 42s
+	-moz-animation: my-animation 102s linear infinite;
+  -webkit-animation: my-animation 102s linear infinite;
+  animation: my-animation 102s linear infinite; */
 }
 /* for Firefox */
 @-moz-keyframes my-animation {

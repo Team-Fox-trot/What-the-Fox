@@ -29,8 +29,8 @@ class App extends React.Component {
     this.state = {
       allFoxes: [],
       foxMemes: [],
-      userInput: ''
-
+      userInput: '',
+      musicButton: true
     }
   }
 
@@ -168,7 +168,9 @@ class App extends React.Component {
             
             <Route
             exact path="/aboutus"
-            element={<Aboutus />}>
+            element={<Aboutus 
+            musicButton={this.state.musicButton}
+            />}>
             </Route>
 
           </Routes>
