@@ -45,16 +45,6 @@ class AboutUs extends React.Component {
         <div id="scroll-container">
           <div id="scroll-text">
             <div id="bio-cards">
-
-              <Card id="music-vid">
-                <Card.Body>
-                  {/* <Card.Title>
-                    Youtube Embed
-                  </Card.Title> */}
-                  <VideoEmbed embedId="jofNR_WkoCE" />
-                </Card.Body>
-              </Card>
-
               <Card id="wdtfs-gif-1">
                 <Card.Img variant="top" src="Assests/wdtfs-1.gif" />
               </Card>

@@ -128,10 +128,10 @@ class App extends React.Component {
 
   updateFoxMeme = async (updateFox) => {
     
-    console.log(updateFox);
+   
     try {
       let updatedFoxFromDB = await axios.put(`${process.env.REACT_APP_SERVER}/foxMemes/${updateFox._id}`, updateFox);
-
+      console.log(updatedFoxFromDB);
       this.foxFromDBtoFav();
     } catch (error) {
       console.log('error msg: ', error.response.data)
