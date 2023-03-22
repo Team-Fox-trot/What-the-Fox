@@ -3,6 +3,7 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
 
 #scroll-container {
   overflow: hidden;
+	background-color: rgb(204,88,3);
 }
 
 #scroll-text {
@@ -11,9 +12,9 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   
-  -moz-animation: my-animation 25s linear infinite;
-  -webkit-animation: my-animation 25s linear infinite;
-  animation: my-animation 25s linear infinite;
+  -moz-animation: my-animation 45s linear infinite;
+  -webkit-animation: my-animation 45s linear infinite;
+  animation: my-animation 45s linear infinite;
 }
 /* for Firefox */
 @-moz-keyframes my-animation {
@@ -46,17 +47,22 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 #bio-cards {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 #thomas {
+	width: 40rem;
 	margin: 1rem;
-	background-image: linear-gradient(to top, red, yellow);
+	background-image: linear-gradient(to top, red, rgb(247,147,76));
+	font-weight: bold;
+	font-size: 1.75rem;
 }
 
 #tom-button {
-	background-color: yellow;
-	border-color: rgb(253, 253, 74);
-	color: black
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
 }
 
 #tom-button:hover {
@@ -64,14 +70,18 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 }
 
 #laurel {
+	width: 40rem;
 	margin: 1rem;
-	background-image: linear-gradient(to top, rgb(245, 32, 103), yellow);
+	background-image: linear-gradient(to top, rgb(245, 32, 103), rgb(247,147,76));
+	font-weight: bold;
+	font-size: 1.75rem;
 }
 
 #laurel-button {
-	background-color: yellow;
-	border-color: rgb(253, 253, 74);
-	color: black;
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
 }
 
 #laurel-button:hover {
@@ -79,14 +89,18 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 }
 
 #abshir {
+	width: 40rem;
 	margin: 1rem;
-	background-image: linear-gradient(to top, rgb(107, 28, 197), yellow);
+	background-image: linear-gradient(to top, rgb(107, 28, 197), rgb(247,147,76));
+	font-weight: bold;
+	font-size: 1.75rem;
 }
 
 #abshir-button {
-	background-color: yellow;
-	border-color: rgb(253, 253, 74);
-	color: black;
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
 }
 
 #abshir-button:hover {
@@ -94,14 +108,18 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 }
 
 #trey {
+	width: 40rem;
 	margin: 1rem;
-	background-image: linear-gradient(to top, rgb(7, 9, 170), yellow);
+	background-image: linear-gradient(to top, rgb(51, 53, 172), rgb(247,147,76));
+	font-weight: bold;
+	font-size: 1.75rem;
 }
 
 #trey-button {
-	background-color: yellow;
-	border-color: rgb(253, 253, 74);
-	color: black;
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
 }
 
 #trey-button:hover {
