@@ -9,6 +9,7 @@ class Footer extends React.Component {
         <div>
           <p className='p'>footer</p>
           <img className='Grass' src='/Assests/GrassBottom.png' alt='' />
+          <img className='Ears' src='/Assests/Fox-ears-transparent.png' alt='' />
         </div>
       </>
       
