@@ -11,7 +11,7 @@ class AboutUs extends React.Component {
         <div id="scroll-container">
           <div id="scroll-text">
             <div id="bio-cards">
-              <Card id="thomas" style={{ width: "18rem" }}>
+              <Card id="thomas">
                 <Card.Img variant="top" src="Assests/tomPicture.png" max-height="180" max-width="286" />
                 <Card.Body>
                   <Card.Title>Thomas Lau</Card.Title>
@@ -29,7 +29,7 @@ class AboutUs extends React.Component {
                   </Button>
                 </Card.Body>
               </Card>
-              <Card id="laurel" style={{ width: "18rem" }}>
+              <Card id="laurel">
                 <Card.Img variant="top" src="Assests/laurelPicture.jpg" max-height="300" max-width="300" />
                 <Card.Body>
                   <Card.Title>Laurel Perkins</Card.Title>
@@ -44,7 +44,7 @@ class AboutUs extends React.Component {
                   </Button>
                 </Card.Body>
               </Card>
-              <Card id="abshir" style={{ width: "18rem" }}>
+              <Card id="abshir">
                 <Card.Img variant="top" src="Assests/abshirPicture.jpg" max-height="180" max-width="286" />
                 <Card.Body>
                   <Card.Title>Abshir Ibrahim</Card.Title>
@@ -58,16 +58,17 @@ class AboutUs extends React.Component {
                   </Button>
                 </Card.Body>
               </Card>
-              <Card id="trey" style={{ width: "18rem" }}>
+              <Card id="trey">
                 <Card.Img variant="top" src="Assests/treyPicture.jpg" max-height="180" max-width="286" />
                 <Card.Body>
                   <Card.Title>Trey Young</Card.Title>
                   <Card.Text>
-                    I'm Thomas, a software developer with a military and filmmaking
-                    background. I am always interested in Software Development and
-                    always want to get into coding. Which is why when I want to make a
-                    career transition few months ago, I picked software development
-                    and focus on Full Stack Development.
+                    I'm Thomas, you're Thomas, we're all Thomas!
+                    I'm Thomas, you're Thomas, we're all Thomas!
+                    I'm Thomas, you're Thomas, we're all Thomas!
+                    I'm Thomas, you're Thomas, we're all Thomas!
+                    I'm Thomas, you're Thomas, we're all Thomas!
+                    I'm Thomas, you're Thomas, we're all Thomas!
                   </Card.Text>
                   <Button
                   id="trey-button"
