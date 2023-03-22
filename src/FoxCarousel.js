@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Container } from 'react-bootstrap';
 
 function FoxCarousel(props) {
   const [index, setIndex] = useState(0);
@@ -86,3 +87,5 @@ function FoxCarousel(props) {
     )
   }
 
+
+export default FoxCarousel;
