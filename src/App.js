@@ -55,6 +55,33 @@ class App extends React.Component {
     })
   };
 
+  foxFromDBtoFav = async () => {
+    let results = await axios.get(`${process.env.REACT_APP_SERVER}/foxMemes`);
+    let foxMemesFromDB = results.data;
+    this.setState({
+      foxMemes: foxMemesFromDB,
+    })
+  };
+
+  deleteFoxMeme = async (id) => {
+    try {
+      let url = `${process.env.REACT_APP_SERVER}/foxMemes/${id}`;
+
+      await axios.delete(url);
+      
+      // let updatedArrayOfMemes = this.state.books.filter(foxMeme => foxMeme._id !== id);
+
+      // this.setState({
+      //   foxMemes: updatedArrayOfMemes
+      // });
+
+    } catch (error) {
+
+      console.log('Error: ', error.response.data)
+
+    }
+  }
+
   /* Add a function to create a new fox meme 
   postFoxMeme = async (newFoxMeme) => {
     try {
@@ -69,24 +96,7 @@ class App extends React.Component {
   }
 
  
-   deleteFoxMeme = async (id) => {
-    try {
-      let url = `${SERVER}/foxMemes/${id}`;
-
-      await axios.delete(url);
-
-      let updatedArrayOfMemes = this.state.books.filter(foxMeme => foxMeme._id !== id);
-
-      this.setState({
-        foxMemes: updatedArrayOfMemes
-      });
-
-    } catch (error) {
-
-      console.log('Error: ', error.response.data)
-
-    }
-  }
+   
 
  
   updateFoxMeme = async (memeToUpdate) => {
@@ -118,6 +128,8 @@ class App extends React.Component {
   componentDidMount() {
     this.fiveRandomFoxes();
     console.log('hello');
+    // getting fox from DB to fav (may not need)
+    this.foxFromDBtoFav();
   }
 
   render() {
@@ -142,7 +154,10 @@ class App extends React.Component {
 
             <Route
             exact path="/favorites"
-            element={<Favorites />}>
+            element={<Favorites
+              foxMemes={this.state.foxMemes}
+              deleteFoxMeme={this.deleteFoxMeme}
+            />}>
             </Route>
             
             <Route
