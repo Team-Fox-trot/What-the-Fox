@@ -1,27 +1,45 @@
 # What the Fox
 
-## Author
+## Author: Team Foxtrot
 
-- Trey Young
-- Laurel Perkins
-- Thomas Lau
-- Abshir Ibrahim
+* Abshir Ibrahim
+* Thomas Lau
+* Laurel Perkins
+* Trey Young
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-## Change Log
 
-## Domain Modeling
+* Fox meme creator, complete with fun fox puns and relevant css stylization
+* Using the Random Fox API, this app will generate a random image of a fox, which the user can than add text to in the format of a classic meme.
+* The user will have the ability to save, update, and delete their collection of fox memes.
+* The user is encouraged to think outside the box, but never outside the fox ;)
 
 ## User Stories
+* As a user, I want to be able to see a collection of fox images, pick the one I want to add text to, then add text to that image. 
+* As a user, I want to be able to login and see the collection of fox memes I've saved.
+* As a user, I want to select a fox meme that I have created, and then edit that fox meme. 
+* As a user, I want to be able to delete fox memes that I no longer want saved to my collection. 
+
+## Getting Started
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+## Architecture
+
+* API: <https://randomfox.ca/floof/>
+* React Bootstrap components used: Carousel, Card probably, update this later
+* Languages used: Javascript, CSS
 
 ## Database Schema Diagram
 
+![data-schema](https://photos.app.goo.gl/oPkuXKsp53ysStf8A)
+## Design Prep
+
+![wtf-wireframe](https://user-images.githubusercontent.com/123340286/226435021-4f1298ec-3626-4a21-b914-e67832bcad8b.jpg)
+![wtf-UML](https://photos.app.goo.gl/1sMQpw2zNaLC9eQL9)
+
+## Change Log
+
 ## Links and Resources
 
-- [submission PR](http://xyz.com)
-- Any Links you used as reference
+* [submission PR](http://xyz.com)
+* Any Links you used as reference

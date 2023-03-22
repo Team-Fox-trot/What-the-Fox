@@ -1,0 +1,127 @@
+/* credits scroll
+reference: <https://blog.hubspot.com/website/scrolling-text-css> */
+
+#scroll-container {
+  overflow: hidden;
+	background-color: rgb(204,88,3);
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  
+  -moz-animation: my-animation 45s linear infinite;
+  -webkit-animation: my-animation 45s linear infinite;
+  animation: my-animation 45s linear infinite;
+}
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateY(100%); }
+  to { -moz-transform: translateY(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateY(100%); }
+  to { -webkit-transform: translateY(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+/* card styling 
+reference: <https://www.w3schools.com/css/css3_gradients.asp> */
+
+#bio-cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#thomas {
+	width: 40rem;
+	margin: 1rem;
+	background-image: linear-gradient(to top, red, rgb(247,147,76));
+	font-weight: bold;
+	font-size: 1.75rem;
+}
+
+#tom-button {
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
+}
+
+#tom-button:hover {
+	background-color: rgb(255, 196, 0);
+}
+
+#laurel {
+	width: 40rem;
+	margin: 1rem;
+	background-image: linear-gradient(to top, rgb(245, 32, 103), rgb(247,147,76));
+	font-weight: bold;
+	font-size: 1.75rem;
+}
+
+#laurel-button {
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
+}
+
+#laurel-button:hover {
+	background-color: rgb(255, 196, 0);
+}
+
+#abshir {
+	width: 40rem;
+	margin: 1rem;
+	background-image: linear-gradient(to top, rgb(107, 28, 197), rgb(247,147,76));
+	font-weight: bold;
+	font-size: 1.75rem;
+}
+
+#abshir-button {
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
+}
+
+#abshir-button:hover {
+	background-color: rgb(255, 196, 0);
+}
+
+#trey {
+	width: 40rem;
+	margin: 1rem;
+	background-image: linear-gradient(to top, rgb(51, 53, 172), rgb(247,147,76));
+	font-weight: bold;
+	font-size: 1.75rem;
+}
+
+#trey-button {
+	background-color: rgb(247,176,91);
+	border-color: rgb(255,193,94);
+	color: rgb(31,19,0);
+	font-weight: bold;
+}
+
+#trey-button:hover {
+	background-color: rgb(255, 196, 0);
+}

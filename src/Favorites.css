@@ -1,0 +1,34 @@
+.favCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  margin: 15px;
+  align-items: center;
+}
+
+.card img {
+  width: 240px;
+  padding: 15px;
+  border-radius: 30px;
+
+}
+
+.card img:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  text-align: center;
+    align-content: center;
+  
+  }
+  .modal-body img {
+  width: 350px;
+  border-radius: 30px;
+  border: 4px rgb(183, 85, 0) solid;
+  }
