@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+
 import './FoxCarousel.css'
 import { Container } from 'react-bootstrap';
 
@@ -63,6 +64,6 @@ class FoxCarousel extends React.Component {
       </Container>
     )
   }
-}
+
 
 export default FoxCarousel;
