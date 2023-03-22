@@ -1,3 +1,4 @@
+
 .color-nav {
    
   background-color: #EF8810;
@@ -26,5 +27,10 @@ body {
 
 .navbar {
   background-color: #CD542E;
+}
+
+
+a.nav-link:hover {
+  color: rgb(255, 196, 0)
 }
 
