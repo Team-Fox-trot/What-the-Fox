@@ -57,7 +57,7 @@ class Favorites extends React.Component {
     });
     return (
       <>
-        {foxCards}
+        <div className='favCard'>{foxCards}</div>
         <FoxModal
           openModal={this.openModal}
           closeModal={this.closeModal}

@@ -13,6 +13,7 @@ class FoxModal extends React.Component {
     }
     // console.log(updateFox);
     this.props.updateFoxMeme(updateFox);
+    this.props.closeModal();
   }
 
 
@@ -36,7 +37,10 @@ class FoxModal extends React.Component {
           </Form>
 
           <Button variant="outline-danger"
-          onClick={() => this.props.deleteFoxMeme(this.props.id)}
+          onClick={() => {
+            this.props.deleteFoxMeme(this.props.id);
+            this.props.closeModal();
+          }}
           >Delete this meme</Button>
 
         </Modal.Body>
