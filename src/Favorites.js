@@ -1,8 +1,8 @@
 import React from 'react';
 import FoxModal from './FoxModal';
-
 import FoxCard from './FoxCard';
 import './Favorites.css';
+
 
 class Favorites extends React.Component {
   constructor(props) {
@@ -11,15 +11,18 @@ class Favorites extends React.Component {
       showModal: false,
       id: '',
       text: '',
+
     }
   }
 
-  openModal = (id, text) => {
+  openModal = (id, text, imgURL) => {
     this.setState({
       showModal: true,
       id: id,
       text: text,
+      imgURL: imgURL,
     })
+    console.log(id);
   }
 
   closeModal = () => {
@@ -28,7 +31,15 @@ class Favorites extends React.Component {
     })
   }
 
+  componentDidMount() {
+    this.props.foxFromDBtoFav();
+
+  }
+
+
+
   render() {
+    console.log(this.props.foxMemes[1]);
     let foxCards = this.props.foxMemes.map(i => {
       return <FoxCard
         imgURL={i.imgURL}
@@ -37,20 +48,21 @@ class Favorites extends React.Component {
         text={i.userInput}
         showModal={this.showModal}
         openModal={this.openModal}
-
       />
+
+
     });
     return (
       <>
         {foxCards}
-        {/* <FoxCard
-        openModal={this.openModal}
-        /> */}
         <FoxModal
           openModal={this.openModal}
           closeModal={this.closeModal}
           deleteFoxMeme={this.props.deleteFoxMeme}
           showModal={this.state.showModal}
+          text={this.state.text}
+          id={this.state.id}
+          imgURL={this.state.imgURL}
         />
       </>
     )
