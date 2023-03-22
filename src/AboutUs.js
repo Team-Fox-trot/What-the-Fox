@@ -4,7 +4,8 @@ import Card from "react-bootstrap/Card";
 
 // Add Music to Credits
 // <https://github.com/goldfire/howler.js>
-import { Howl } from 'howler';
+import {Howl, Howler} from 'howler';
+
 
 import './AboutUs.css';
 
@@ -32,6 +33,7 @@ class AboutUs extends React.Component {
   };
 
   playMusic = () => {
+    
     sound.play();
     this.removeButton();
     // console.log("Play the tunes!")

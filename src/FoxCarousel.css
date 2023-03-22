@@ -1,12 +1,14 @@
-.container img {
-  height: 500px;
+
+.carousel{
+  height: 400px;
+  width: 500px;
+  margin: auto;
+
 }
 
-
-
-img {
-  object-fit: cover;
-  object-position: center;
-  height: 750px;
-
+.foxCarouselItem{
+  max-height: 400px;
+  max-width: 400px;
+ border: solid #1f1300 10px; 
+  margin-left: 10%;
 }

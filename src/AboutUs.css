@@ -92,26 +92,31 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 
 #wdtfs-gif-1 {
 	margin-bottom: 25rem;
+	width: 500px;
 }
 
 #wdtfs-gif-2 {
 	margin-top: 2.5rem;
 	margin-bottom: 1.5rem;
+	width: 500px;
 }
 
 #wdtfs-gif-3 {
 	margin-top: 2.5rem;
 	margin-bottom: 1.5rem;
+	width: 500px;
 }
 
 #wdtfs-gif-4 {
 	margin-top: 2.5rem;
 	margin-bottom: 1.5rem;
+	width: 500px;
 }
 
 #wdtfs-gif-5 {
 	margin-top: 2.5rem;
 	margin-bottom: 1.5rem;
+	width: 500px;
 }
 
 #thomas {
@@ -120,6 +125,7 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	background-image: linear-gradient(to top, red, rgb(247,147,76));
 	font-weight: bold;
 	font-size: 1.75rem;
+	padding: 50px;
 }
 
 #tom-button {
@@ -140,6 +146,7 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	background-image: linear-gradient(to top, rgb(245, 32, 103), rgb(247,147,76));
 	font-weight: bold;
 	font-size: 1.75rem;
+	padding: 50px;
 }
 
 #laurel-button {
@@ -160,6 +167,7 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	background-image: linear-gradient(to top, rgb(107, 28, 197), rgb(247,147,76));
 	font-weight: bold;
 	font-size: 1.75rem;
+	padding: 50px;
 }
 
 #abshir-button {
@@ -180,6 +188,7 @@ reference: <https://www.w3schools.com/css/css3_gradients.asp> */
 	background-image: linear-gradient(to top, rgb(51, 53, 172), rgb(247,147,76));
 	font-weight: bold;
 	font-size: 1.75rem;
+	padding: 50px;
 }
 
 #trey-button {
