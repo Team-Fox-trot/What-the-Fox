@@ -1,0 +1,24 @@
+.card {
+  width: 400px;
+  margin: 15px;
+  align-items: center;
+}
+
+.card img {
+  padding: 15px;
+  /* border-radius: 50px; */
+
+}
+
+.card img:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  text-align: center;
+    align-content: center;
+  
+  }
+  .modal-body img {
+  width: 500px;
+  }
