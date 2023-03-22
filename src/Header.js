@@ -8,8 +8,8 @@ import Navbar from 'react-bootstrap/Navbar';
 class Header extends React.Component {
   render() {
     return (
-      <>
-      <Navbar bg="dark" variant="dark">
+      // <>
+      <Navbar bg="" variant="dark">
         <Container>
           <Nav className="color-nav">
             <Nav.Link href="/">Home</Nav.Link>
@@ -19,9 +19,9 @@ class Header extends React.Component {
           </Nav>
         </Container>
       </Navbar>
-      {/* <Login />
-      <Logout /> */}
-      </>
+      /* <Login />
+      <Logout /> */
+      // </>
     )
   }
 }

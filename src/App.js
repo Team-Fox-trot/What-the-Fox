@@ -139,8 +139,8 @@ class App extends React.Component {
     // this will probably be moved to carousel component?
     return (
       <>
-        <Router>
           <Header />
+        <Router>
           <Routes>
             {this.state.allFoxes.length > 0 &&
             <>
