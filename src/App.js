@@ -14,6 +14,7 @@ import {
   Route,
 } from "react-router-dom";
 
+let SERVER = process.env.REACT_APP_SERVER;
 
 class FoxPictures {
   constructor(foxObj){
@@ -29,6 +30,7 @@ class App extends React.Component {
       allFoxes: [],
       foxMemes: [],
       userInput: ''
+
     }
   }
 
@@ -37,7 +39,6 @@ class App extends React.Component {
     try {
       let results = await axios.get(`https://randomfox.ca/floof/`);
       let newFoxPic = new FoxPictures(results.data);
-      console.log(results);
       return newFoxPic;
     } catch (error) {
       console.log('Error:', error.response.data)
@@ -55,11 +56,25 @@ class App extends React.Component {
     })
   };
 
-  /* Add a function to create a new fox meme 
+  handleOnChange = (e) =>{
+    this.setState({
+    userInput: e.target.value
+  })
+  }
+
+  handleFoxSubmit = (dataFromFoxCarousel) => {
+     let newFoxMeme = dataFromFoxCarousel;
+    console.log(newFoxMeme);
+    this.postFoxMeme(newFoxMeme);
+  }
+
+  // Add a function to create a new fox meme 
   postFoxMeme = async (newFoxMeme) => {
     try {
       let url = `${SERVER}/foxMemes`;
+      console.log(newFoxMeme)
       let createdFoxMeme = await axios.post(url, newFoxMeme);
+      console.log(createdFoxMeme)
       this.setState({
         foxMemes: [...this.state.foxMemes, createdFoxMeme.data]
       })
@@ -67,7 +82,7 @@ class App extends React.Component {
       console.log('Error: ', error.response.data)
     }
   }
-
+/* 
  
    deleteFoxMeme = async (id) => {
     try {
@@ -135,6 +150,8 @@ class App extends React.Component {
             element={<Main 
               allFoxes={this.state.allFoxes}
               userInput={this.state.userInput}
+              handleFoxSubmit={this.handleFoxSubmit}
+              handleOnChange={this.handleOnChange}
             />}>
             </Route>
             </>
