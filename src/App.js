@@ -56,6 +56,17 @@ class App extends React.Component {
     })
   };
 
+
+  foxFromDBtoFav = async () => {
+    let results = await axios.get(`${process.env.REACT_APP_SERVER}/foxMemes`);
+    let foxMemesFromDB = results.data;
+    this.setState({
+      foxMemes: foxMemesFromDB,
+    })
+    // console.log(this.state.foxMemes);
+  };
+
+
   handleOnChange = (e) =>{
     this.setState({
     userInput: e.target.value
@@ -82,20 +93,13 @@ class App extends React.Component {
       console.log('Error: ', error.response.data)
     }
   }
-/* 
+
  
    deleteFoxMeme = async (id) => {
     try {
-      let url = `${SERVER}/foxMemes/${id}`;
-
+      let url = `${process.env.REACT_APP_SERVER}/foxMemes/${id}`;
       await axios.delete(url);
-
-      let updatedArrayOfMemes = this.state.books.filter(foxMeme => foxMeme._id !== id);
-
-      this.setState({
-        foxMemes: updatedArrayOfMemes
-      });
-
+      this.foxFromDBtoFav();
     } catch (error) {
 
       console.log('Error: ', error.response.data)
@@ -103,36 +107,31 @@ class App extends React.Component {
     }
   }
 
- 
-  updateFoxMeme = async (memeToUpdate) => {
+  updateFoxMeme = async (updateFox) => {
     try {
-      let updatedMemeFromDatabase = await axios.put(`${process.env.REACT_APP_SERVER}/foxMemes/${memeToUpdate._id}`, memeToUpdate);
-
-      let updatedMemes = this.state.foxMemes.map((meme) => {
-
-        return foxMeme._id === memeToUpdate._id
-          ?
-          updatedMemeFromDatabase.data
-          :
-          meme
-      });
-      
-      this.setState({
-        foxMemes: updatedMemes
-      });
-
+      let updatedFoxFromDB = await axios.put(`${process.env.REACT_APP_SERVER}/foxMemes/${updateFox._id}`, updateFox);
+      console.log(updatedFoxFromDB.data);
+      this.foxFromDBtoFav();
     } catch (error) {
+      console.log('error msg: ', error.response.data)
+    }
+  }
+
+  /* Add a function to create a new fox meme 
+  postFoxMeme = async (newFoxMeme) => {
+    try {
+      let url = `${SERVER}/foxMemes`;
+      let createdFoxMeme = await axios.post(url, newFoxMeme);
       this.setState({
-        error: true,
-        errorMessage: 'Error',
-      });
-      console.log(error)
+        foxMemes: [...this.state.foxMemes, createdFoxMeme.data]
+      })
+    } catch (error) {
+      console.log('Error: ', error.response.data)
     }
   }
 */
   componentDidMount() {
     this.fiveRandomFoxes();
-    console.log('hello');
   }
 
   render() {
@@ -159,7 +158,12 @@ class App extends React.Component {
 
             <Route
             exact path="/favorites"
-            element={<Favorites />}>
+            element={<Favorites
+              foxMemes={this.state.foxMemes} 
+              deleteFoxMeme={this.deleteFoxMeme}
+              updateFoxMeme={this.updateFoxMeme}
+              foxFromDBtoFav={this.foxFromDBtoFav}
+            />}>
             </Route>
             
             <Route
