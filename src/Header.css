@@ -1,10 +1,30 @@
 .color-nav {
-  background-color: #CD542E;
+   
+  background-color: #EF8810;
   color: black;
+  width: 50%;
   
 }
 
 .container {
-  background-color: #CD542E;
+  
+  background-color: #EF8810;
   color: black
+  
 }
+
+#root {
+  background-color: #CD542E; 
+  width: 100%;
+  padding-bottom: 3rem;
+
+}
+
+body {
+  background-color: #CD542E;
+}
+
+.navbar {
+  background-color: #CD542E;
+}
+
