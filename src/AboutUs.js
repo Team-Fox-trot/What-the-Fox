@@ -74,7 +74,7 @@ class AboutUs extends React.Component {
                   </Card.Text>
                   <Button
                     id="tom-button"
-                    variant="primary" src="https://github.com/Rapib">
+                    variant="primary" href="https://github.com/Rapib"  target="_blank">
                     Check Out My Github
                   </Button>
                 </Card.Body>
@@ -94,7 +94,7 @@ class AboutUs extends React.Component {
                   </Card.Text>
                   <Button
                     id="laurel-button"
-                    variant="primary" src="https://github.com/gone-explauren">
+                    variant="primary" href="https://github.com/gone-explauren" target="_blank">
                     Check Out My Github
                   </Button>
                 </Card.Body>
@@ -114,7 +114,7 @@ class AboutUs extends React.Component {
                   </Card.Text>
                   <Button
                     id="abshir-button"
-                    variant="primary" src="https://github.com/abshir206">
+                    variant="primary" href="https://github.com/abshir206"target="_blank">
                     Check Out My Github
                   </Button>
                 </Card.Body>
@@ -138,7 +138,7 @@ class AboutUs extends React.Component {
                   </Card.Text>
                   <Button
                     id="trey-button"
-                    variant="primary" src="https://github.com/goodpudding">
+                    variant="primary" href="https://github.com/goodpudding" target="_blank">
                     Check Out My Github
                   </Button>
                 </Card.Body>
