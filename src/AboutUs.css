@@ -70,9 +70,9 @@ reference: <https://blog.hubspot.com/website/scrolling-text-css> */
 
 @keyframes my-animation {
   from {
-    -moz-transform: translateY(15%);
-    -webkit-transform: translateY(15%);
-    transform: translateY(15%);
+    -moz-transform: translateY(18%);
+    -webkit-transform: translateY(18%);
+    transform: translateY(18%);
   }
   to {
     -moz-transform: translateY(-100%);
