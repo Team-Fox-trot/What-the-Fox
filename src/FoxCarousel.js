@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
 import { useAuth0 } from '@auth0/auth0-react';
-
+import './FoxCarousel.css'
 function FoxCarousel(props) {
   //auth0
   const { isAuthenticated } = useAuth0()
@@ -25,8 +25,8 @@ function FoxCarousel(props) {
     props.handleFoxSubmit(newFoxMeme);
   }
     return (
-      <Container>
-      <Carousel interval={null} index={index} onSelect={handleSelect}>
+      <Container className="caro">
+      <Carousel interval={null} index={index} onSelect={handleSelect} >
       <Carousel.Item>
         <img
           className="d-block w-100"

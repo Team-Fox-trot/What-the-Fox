@@ -2,37 +2,47 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 
 
-.card {
+div .card {
   width: 250px;
-  height: 350px;
   margin: 15px;
   align-items: center;
+  background-color: #ffc669;
 }
 
 
 
 .favCard img {
-  width: 240px;
+  width: 250px;
   padding: 15px;
   border-radius: 30px;
-
 }
 
 .card img:hover {
   cursor: pointer;
 }
 
-.modal-body {
+.modal-body, .modal-header {
   text-align: center;
-    align-content: center;
-  
-  }
-  .modal-body img {
+  align-content: center;
+  background-color: #fff0d9;
+
+}
+
+
+.modal-body img {
   width: 350px;
   border-radius: 30px;
   border: 4px rgb(183, 85, 0) solid;
-  }
+}
+.btn {
+  margin-top: 10px;
+}
+
+#text {
+  background-color: #fff0d9;
+}
