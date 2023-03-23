@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 
 // Add Music to Credits
 // <https://github.com/goldfire/howler.js>
-import { Howl } from 'howler';
+// import { Howl } from 'howler';
 import VideoEmbed from './VideoEmbed';
 
 import './AboutUs.css';
