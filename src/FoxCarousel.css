@@ -1,8 +1,5 @@
-.Container {
-  width: 50%;
-  background-color: red;
-
-
+.container img {
+  height: 500px;
 }
 
 .carousel-item {
@@ -15,6 +12,6 @@
 img {
   object-fit: cover;
   object-position: center;
-  height: 700px;
+  height: 750px;
 
 }

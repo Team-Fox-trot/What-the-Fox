@@ -6,7 +6,7 @@ import Main from './Main';
 import './Header.css'
 import Favorites from './Favorites';
 import Aboutus from './AboutUs'
-
+import { withAuth0 } from '@auth0/auth0-react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -17,8 +17,8 @@ import {
 let SERVER = process.env.REACT_APP_SERVER;
 
 class FoxPictures {
-  constructor(foxObj){
-    this.src = foxObj.image;  
+  constructor(foxObj) {
+    this.src = foxObj.image;
   }
 }
 
@@ -29,8 +29,8 @@ class App extends React.Component {
     this.state = {
       allFoxes: [],
       foxMemes: [],
-      userInput: ''
-
+      userInput: '',
+      musicButton: true
     }
   }
 
@@ -48,7 +48,7 @@ class App extends React.Component {
   fiveRandomFoxes = async () => {
     let randomFoxesArray = [];
     while (randomFoxesArray.length < 5) {
-      let randomFox =  await this.getFoxes();
+      let randomFox = await this.getFoxes();
       randomFoxesArray.push(randomFox);
     }
     this.setState({
@@ -58,23 +58,39 @@ class App extends React.Component {
 
 
   foxFromDBtoFav = async () => {
-    let results = await axios.get(`${process.env.REACT_APP_SERVER}/foxMemes`);
-    let foxMemesFromDB = results.data;
+    try {
+      //auth0
+      if (this.props.auth0.isAuthenticated) {
+        const res = await this.props.auth0.getIdTokenClaims();
+        const jwt = res.__raw;
+        const config = {
+          method: 'get',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: '/foxMemes',
+          headers: {
+            "Authorization": `Bearer ${jwt}`
+          }
+        }
+        let results = await axios(config);
+        let foxMemesFromDB = results.data;
+        this.setState({
+          foxMemes: foxMemesFromDB,
+        })
+      };
+    } catch (error) {
+      console.log('there is an error: ', error.response.data)
+    }
+  }
+
+
+  handleOnChange = (e) => {
     this.setState({
-      foxMemes: foxMemesFromDB,
+      userInput: e.target.value
     })
-    // console.log(this.state.foxMemes);
-  };
-
-
-  handleOnChange = (e) =>{
-    this.setState({
-    userInput: e.target.value
-  })
   }
 
   handleFoxSubmit = (dataFromFoxCarousel) => {
-     let newFoxMeme = dataFromFoxCarousel;
+    let newFoxMeme = dataFromFoxCarousel;
     console.log(newFoxMeme);
     this.postFoxMeme(newFoxMeme);
   }
@@ -82,10 +98,27 @@ class App extends React.Component {
   // Add a function to create a new fox meme 
   postFoxMeme = async (newFoxMeme) => {
     try {
+
+
+      // if (this.props.auth0.isAuthenticated) {
+      //   const res = await this.props.auth0.getIdTokenClaims();
+      //   const jwt = res.__raw;
+      //   const config = {
+      //     method: 'post',
+      //     baseURL: process.env.REACT_APP_SERVER,
+      //     url: '/foxMemes',
+      //     headers: {
+      //       "Authorization": `Bearer ${jwt}`
+      //     }
+      //   }
+      //   let results = await axios(config);
+      //   let foxMemesFromDB = results.data;}
+
+
       let url = `${SERVER}/foxMemes`;
       console.log(newFoxMeme)
       let createdFoxMeme = await axios.post(url, newFoxMeme);
-      console.log(createdFoxMeme)
+      console.log(createdFoxMeme);
       this.setState({
         foxMemes: [...this.state.foxMemes, createdFoxMeme.data]
       })
@@ -94,12 +127,16 @@ class App extends React.Component {
     }
   }
 
- 
-   deleteFoxMeme = async (id) => {
+
+  deleteFoxMeme = async (id) => {
     try {
       let url = `${process.env.REACT_APP_SERVER}/foxMemes/${id}`;
       await axios.delete(url);
       this.foxFromDBtoFav();
+      // let updatedfoxMemes = this.state.foxMemes.filter(i => i._id !== id);
+      // this.setState({
+      //   foxMemes: updatedfoxMemes,
+      // });
     } catch (error) {
 
       console.log('Error: ', error.response.data)
@@ -108,8 +145,10 @@ class App extends React.Component {
   }
 
   updateFoxMeme = async (updateFox) => {
+    
     try {
       let updatedFoxFromDB = await axios.put(`${process.env.REACT_APP_SERVER}/foxMemes/${updateFox._id}`, updateFox);
+
       console.log(updatedFoxFromDB.data);
       this.foxFromDBtoFav();
     } catch (error) {
@@ -132,6 +171,7 @@ class App extends React.Component {
 */
   componentDidMount() {
     this.fiveRandomFoxes();
+    // this.foxFromDBtoFav();
   }
 
   render() {
@@ -139,36 +179,38 @@ class App extends React.Component {
     // this will probably be moved to carousel component?
     return (
       <>
-        <Router>
           <Header />
+        <Router>
           <Routes>
             {this.state.allFoxes.length > 0 &&
-            <>
-            <Route
-            exact path="/"
-            element={<Main 
-              allFoxes={this.state.allFoxes}
-              userInput={this.state.userInput}
-              handleFoxSubmit={this.handleFoxSubmit}
-              handleOnChange={this.handleOnChange}
-            />}>
-            </Route>
-            </>
+              <>
+                <Route
+                  exact path="/"
+                  element={<Main
+                    allFoxes={this.state.allFoxes}
+                    userInput={this.state.userInput}
+                    handleFoxSubmit={this.handleFoxSubmit}
+                    handleOnChange={this.handleOnChange}
+                  />}>
+                </Route>
+              </>
             }
 
             <Route
-            exact path="/favorites"
-            element={<Favorites
-              foxMemes={this.state.foxMemes} 
-              deleteFoxMeme={this.deleteFoxMeme}
-              updateFoxMeme={this.updateFoxMeme}
-              foxFromDBtoFav={this.foxFromDBtoFav}
-            />}>
+              exact path="/favorites"
+              element={this.props.auth0.isAuthenticated ? <Favorites
+                foxMemes={this.state.foxMemes}
+                deleteFoxMeme={this.deleteFoxMeme}
+                updateFoxMeme={this.updateFoxMeme}
+                foxFromDBtoFav={this.foxFromDBtoFav}
+              />: null}>
             </Route>
-            
+
             <Route
             exact path="/aboutus"
-            element={<Aboutus />}>
+            element={<Aboutus 
+            musicButton={this.state.musicButton}
+            />}>
             </Route>
 
           </Routes>
@@ -179,4 +221,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withAuth0(App);

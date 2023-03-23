@@ -4,6 +4,8 @@
   flex-wrap: wrap;
 }
 
+
+
 .card {
   width: 250px;
   height: 350px;
@@ -11,7 +13,9 @@
   align-items: center;
 }
 
-.card img {
+
+
+.favCard img {
   width: 240px;
   padding: 15px;
   border-radius: 30px;

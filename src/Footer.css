@@ -1,14 +1,35 @@
 .Grass {
   justify-content: center;
-  flex-wrap: wrap;
+
   width: 100%;
   height: 15%;
   margin: auto;
   position: fixed; 
   bottom: -1%;
   padding: 0px;
+  z-index: 2;
+  border: 100px black;
+  background-color: #CD542E;;
+
   
 }
 
+.Ears {
+  height: 20%;
+  /* margin-bottom: -5%; */
+  z-index: 3;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transition: 1s;
+
+
+}
+
+.Ears:hover {
+  transform: scale(1.3)
+
+
+}
 
 
