@@ -7,11 +7,8 @@
   position: fixed; 
   bottom: -1%;
   padding: 0px;
-  z-index: 2;
+  /* z-index: 2; */
   border: 100px black;
-  background-color: #CD542E;;
-
-  
 }
 
 .Ears {
