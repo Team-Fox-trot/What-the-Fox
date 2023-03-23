@@ -35,14 +35,11 @@ class Favorites extends React.Component {
 
   componentDidMount() {
     this.props.foxFromDBtoFav();
-    
-
   }
 
 
 
   render() {
-    console.log(this.props.foxMemes);
     (this.props.foxMemes && this.props.foxMemes.length > 0 && console.log(this.props.foxMemes[0]._id));
     let foxCards = this.props.foxMemes.map(i => {
       return <FoxCard

@@ -11,7 +11,7 @@ class FoxModal extends React.Component {
       _id: this.props.id,
       __v: this.props.v
     }
-    // console.log(updateFox);
+    console.log(updateFox);
     this.props.updateFoxMeme(updateFox);
     this.props.closeModal();
   }

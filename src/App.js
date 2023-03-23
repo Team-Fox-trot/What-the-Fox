@@ -7,7 +7,6 @@ import './Header.css'
 import Favorites from './Favorites';
 import Aboutus from './AboutUs'
 import { withAuth0 } from '@auth0/auth0-react';
-
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -59,18 +58,11 @@ class App extends React.Component {
 
 
   foxFromDBtoFav = async () => {
-    console.log(this.props.auth0.isAuthenticated);
     try {
       //auth0
-      console.log('try to get token and is authenticated');
-
       if (this.props.auth0.isAuthenticated) {
-        console.log('try to get token after auth');
         const res = await this.props.auth0.getIdTokenClaims();
         const jwt = res.__raw;
-        // setTimeout(()=> console.log(jwt), 5000);
-        // console.log(jwt);
-
         const config = {
           method: 'get',
           baseURL: process.env.REACT_APP_SERVER,
@@ -80,12 +72,10 @@ class App extends React.Component {
           }
         }
         let results = await axios(config);
-        console.log(results);
         let foxMemesFromDB = results.data;
         this.setState({
           foxMemes: foxMemesFromDB,
         })
-        // console.log(this.state.foxMemes);
       };
     } catch (error) {
       console.log('there is an error: ', error.response.data)
@@ -108,10 +98,27 @@ class App extends React.Component {
   // Add a function to create a new fox meme 
   postFoxMeme = async (newFoxMeme) => {
     try {
+
+
+      // if (this.props.auth0.isAuthenticated) {
+      //   const res = await this.props.auth0.getIdTokenClaims();
+      //   const jwt = res.__raw;
+      //   const config = {
+      //     method: 'post',
+      //     baseURL: process.env.REACT_APP_SERVER,
+      //     url: '/foxMemes',
+      //     headers: {
+      //       "Authorization": `Bearer ${jwt}`
+      //     }
+      //   }
+      //   let results = await axios(config);
+      //   let foxMemesFromDB = results.data;}
+
+
       let url = `${SERVER}/foxMemes`;
       console.log(newFoxMeme)
       let createdFoxMeme = await axios.post(url, newFoxMeme);
-      console.log(createdFoxMeme)
+      console.log(createdFoxMeme);
       this.setState({
         foxMemes: [...this.state.foxMemes, createdFoxMeme.data]
       })
@@ -126,6 +133,10 @@ class App extends React.Component {
       let url = `${process.env.REACT_APP_SERVER}/foxMemes/${id}`;
       await axios.delete(url);
       this.foxFromDBtoFav();
+      // let updatedfoxMemes = this.state.foxMemes.filter(i => i._id !== id);
+      // this.setState({
+      //   foxMemes: updatedfoxMemes,
+      // });
     } catch (error) {
 
       console.log('Error: ', error.response.data)
@@ -134,8 +145,10 @@ class App extends React.Component {
   }
 
   updateFoxMeme = async (updateFox) => {
+    
     try {
       let updatedFoxFromDB = await axios.put(`${process.env.REACT_APP_SERVER}/foxMemes/${updateFox._id}`, updateFox);
+
       console.log(updatedFoxFromDB.data);
       this.foxFromDBtoFav();
     } catch (error) {
