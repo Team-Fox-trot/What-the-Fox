@@ -1,6 +1,7 @@
 
 
 
+
 .caro {
   text-align: center;
   align-items: center;
@@ -8,7 +9,9 @@
   padding-bottom: 50px;
 }
 
-/* img {
+
+img {
+
   object-fit: cover;
   object-position: center;
   height: 750px;
