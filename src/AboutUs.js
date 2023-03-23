@@ -10,11 +10,12 @@ import './AboutUs.css';
 
 const sound = new Howl({
   src: 'public/Assests/fox-ylvis-second-chorus-and-outro.mp3',
-  html5: true,
+  html5: false,
   format: 'mp3',
   volume: 1.0,
 });
 // console.log(sound);
+// embed video https://www.youtube.com/watch?v=jofNR_WkoCE&ab_channel=discoveryplusNorge
 
 
 class AboutUs extends React.Component {
