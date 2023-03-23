@@ -3,8 +3,11 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function FoxCarousel(props) {
+  //auth0
+  const { isAuthenticated } = useAuth0()
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -75,14 +78,14 @@ function FoxCarousel(props) {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-    <Form onSubmit={foxHandler}>
+    {isAuthenticated && (<Form onSubmit={foxHandler}>
       <Form.Group  controlId="userInput">
         <Form.Control type="text"  placeholder="What does the fox say?" onChange={props.handleOnChange} />
       </Form.Group>
       <Button variant="primary" type="submit">
         Submit
       </Button>
-    </Form>
+    </Form>)}
     </Container>
     )
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withAuth0 } from "@auth0/auth0-react";
 import FoxModal from './FoxModal';
 import FoxCard from './FoxCard';
 import './Favorites.css';
@@ -34,13 +35,15 @@ class Favorites extends React.Component {
 
   componentDidMount() {
     this.props.foxFromDBtoFav();
+    
 
   }
 
 
 
   render() {
-    (this.props.foxmemes && this.props.foxmemes.length > 0 && console.log(this.props.foxMemes[0]._id));
+    console.log(this.props.foxMemes);
+    (this.props.foxMemes && this.props.foxMemes.length > 0 && console.log(this.props.foxMemes[0]._id));
     let foxCards = this.props.foxMemes.map(i => {
       return <FoxCard
         imgURL={i.imgURL}
@@ -74,4 +77,4 @@ class Favorites extends React.Component {
   }
 }
 
-export default Favorites;
+export default withAuth0(Favorites);
