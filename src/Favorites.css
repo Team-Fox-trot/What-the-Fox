@@ -4,19 +4,23 @@
   flex-wrap: wrap;
 }
 
-/* .favCard {
+
+
+.card {
   width: 250px;
   height: 350px;
   margin: 15px;
   align-items: center;
 }
 
+
+
 .favCard img {
   width: 240px;
   padding: 15px;
   border-radius: 30px;
 
-} */
+}
 
 .card img:hover {
   cursor: pointer;
