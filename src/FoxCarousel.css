@@ -1,17 +1,13 @@
-.container img {
-  height: 500px;
+
+
+
+
+.caro {
+  text-align: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 100px;
 }
 
-.carousel-item {
-  /* height: 800px; */
-  
 
 
-}
-
-img {
-  object-fit: cover;
-  object-position: center;
-  height: 750px;
-
-}

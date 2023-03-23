@@ -8,6 +8,8 @@ import Favorites from './Favorites';
 import Aboutus from './AboutUs'
 import { withAuth0 } from '@auth0/auth0-react';
 import './App.css';
+
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -88,6 +90,7 @@ class App extends React.Component {
       userInput: e.target.value
     })
   }
+
 
   handleFoxSubmit = (dataFromFoxCarousel) => {
     let newFoxMeme = dataFromFoxCarousel;

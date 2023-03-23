@@ -4,6 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
 import { useAuth0 } from '@auth0/auth0-react';
+import './FoxCarousel.css'
+import { useNavigate } from "react-router-dom";
+
 
 function FoxCarousel(props) {
   //auth0
@@ -14,6 +17,7 @@ function FoxCarousel(props) {
     console.log(selectedIndex);
     setIndex(selectedIndex);
   };
+  const navigate = useNavigate();
 
   const foxHandler = (e) =>{
     e.preventDefault();
@@ -21,12 +25,12 @@ function FoxCarousel(props) {
       userInput: props.userInput,
       imgURL: props.allFoxes[index].src,
     }
-    console.log(newFoxMeme);
     props.handleFoxSubmit(newFoxMeme);
+    navigate("/favorites");
   }
     return (
-      <Container>
-      <Carousel interval={null} index={index} onSelect={handleSelect}>
+      <Container className="caro">
+      <Carousel interval={null} index={index} onSelect={handleSelect} >
       <Carousel.Item>
         <img
           className="d-block w-100"

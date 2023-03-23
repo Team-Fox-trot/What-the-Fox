@@ -4,65 +4,64 @@ import Card from "react-bootstrap/Card";
 
 // Add Music to Credits
 // <https://github.com/goldfire/howler.js>
-import { Howl } from 'howler';
+// import { Howl } from 'howler';
+import VideoEmbed from './VideoEmbed';
 
 import './AboutUs.css';
 
-const sound = new Howl({
-  src: 'public/Assests/fox-ylvis-second-chorus-and-outro.mp3',
-  html5: false,
-  format: 'mp3',
-  volume: 1.0,
-});
+// const sound = new Howl({
+//   src: 'public/Assests/fox-ylvis-second-chorus-and-outro.mp3',
+//   html5: true,
+//   format: 'mp3',
+//   volume: 1.0,
+// });
 // console.log(sound);
 // embed video https://www.youtube.com/watch?v=jofNR_WkoCE&ab_channel=discoveryplusNorge
 
 
 class AboutUs extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      showMusicButton: true,
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     showMusicButton: true,
+  //   }
+  // }
 
-  removeButton = () => {
-    this.setState({ showMusicButton: false })
-  };
+  // removeButton = () => {
+  //   this.setState({ showMusicButton: false })
+  // };
 
-  playMusic = () => {
-    sound.play();
-    this.removeButton();
-    // console.log("Play the tunes!")
-  }
+  // playMusic = () => {
+  //   sound.play();
+  //   this.removeButton();
+  //   // console.log("Play the tunes!")
+  // }
 
   render() {
 
 
     return (
       <>
-        <section id="button-section">
-          {this.state.showMusicButton && <Button id="music-button"
-            onClick={() => {
-              this.playMusic()
-            }}
-          >
-            Roll Credits!
-          </Button>
-          }
-        </section>
-
         <div id="scroll-container">
           <div id="scroll-text">
             <div id="bio-cards">
+
+              <Card id="music-vid">
+                <Card.Body>
+                  {/* <Card.Title>
+                    Youtube Embed
+                  </Card.Title> */}
+                  <VideoEmbed embedId="jofNR_WkoCE" />
+                </Card.Body>
+              </Card>
 
               <Card id="wdtfs-gif-1">
                 <Card.Img variant="top" src="Assests/wdtfs-1.gif" />
               </Card>
 
               <Card id="thomas">
-                <Card.Img variant="top" src="Assests/tomPicture.png" />
+                <Card.Img variant="top" src="Assests/tomPicture.png" max-width="250px" />
                 <Card.Body>
                   <Card.Title>Thomas Lau</Card.Title>
                   <Card.Text>
@@ -85,7 +84,7 @@ class AboutUs extends React.Component {
               </Card>
 
               <Card id="laurel">
-                <Card.Img variant="top" src="Assests/laurelPicture.jpg" />
+                <Card.Img variant="top" src="Assests/laurelPicture.jpg" max-width="250px" />
                 <Card.Body>
                   <Card.Title>Laurel Perkins</Card.Title>
                   <Card.Text>
@@ -106,7 +105,7 @@ class AboutUs extends React.Component {
               </Card>
 
               <Card id="abshir">
-                <Card.Img variant="top" src="Assests/abshirPicture.jpg" />
+                <Card.Img variant="top" src="Assests/abshirPicture.jpg" max-width="250px" />
                 <Card.Body>
                   <Card.Title>Abshir Ibrahim</Card.Title>
                   <Card.Text>
@@ -125,7 +124,7 @@ class AboutUs extends React.Component {
               </Card>
 
               <Card id="trey">
-                <Card.Img variant="top" src="Assests/treyPicture.jpg" />
+                <Card.Img variant="top" src="Assests/treyPicture.jpg" max-width="250px" />
                 <Card.Body>
                   <Card.Title>Trey Young</Card.Title>
                   <Card.Text>
