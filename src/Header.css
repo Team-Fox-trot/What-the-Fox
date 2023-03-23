@@ -1,7 +1,7 @@
 
 .color-nav {
    
-  background-color: #EF8810;
+  background-color: #3d1306;
   color: black;
   width: 50%;
   
@@ -9,24 +9,24 @@
 
 .container {
   
-  background-color: #EF8810;
+  background-color: ##3d1306;
   color: black
   
 }
 
 #root {
-  background-color: #CD542E; 
+  background-color: #3d1306; 
   width: 100%;
   padding-bottom: 3rem;
 
 }
 
 body {
-  background-color: #CD542E;
+  background-color: #3d1306;
 }
 
 .navbar {
-  background-color: #CD542E;
+  background-color: #3d1306;
 }
 
 
