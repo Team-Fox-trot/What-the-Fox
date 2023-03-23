@@ -29,8 +29,8 @@ class App extends React.Component {
     this.state = {
       allFoxes: [],
       foxMemes: [],
-      userInput: ''
-
+      userInput: '',
+      musicButton: true
     }
   }
 
@@ -179,8 +179,8 @@ class App extends React.Component {
     // this will probably be moved to carousel component?
     return (
       <>
-        <Router>
           <Header />
+        <Router>
           <Routes>
             {this.state.allFoxes.length > 0 &&
               <>
@@ -207,8 +207,10 @@ class App extends React.Component {
             </Route>
 
             <Route
-              exact path="/aboutus"
-              element={<Aboutus />}>
+            exact path="/aboutus"
+            element={<Aboutus 
+            musicButton={this.state.musicButton}
+            />}>
             </Route>
 
           </Routes>
