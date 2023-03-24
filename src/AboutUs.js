@@ -51,7 +51,7 @@ class AboutUs extends React.Component {
                   {/* <Card.Title>
                     Youtube Embed
                   </Card.Title> */}
-                  <VideoEmbed embedId="jofNR_WkoCE" />
+                  
                 </Card.Body>
               </Card>
 
