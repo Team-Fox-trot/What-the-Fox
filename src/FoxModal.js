@@ -3,10 +3,10 @@ import { Modal, Button, Form } from 'react-bootstrap';
 class FoxModal extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.text.value);
     let updateFox = {
       userInput: e.target.text.value || this.props.text,
-      imgURL: this.props.imgURL,
+      imgUrl: this.props.imgUrl,
+      memeURL: this.props.memeURL,
       _id: this.props.id,
       __v: this.props.v
     }
@@ -24,7 +24,7 @@ class FoxModal extends React.Component {
         <Modal.Header closeButton>
         </Modal.Header>
         <Modal.Body>
-          <img src={this.props.imgURL} alt='alttext' />
+          <img src={this.props.memeURL} alt='alttext' />
           <Form onSubmit={this.handleSubmit}>
             <Form.Group controlId="text">
               <Form.Label>What does the Fox want to say now?</Form.Label>

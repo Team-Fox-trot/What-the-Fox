@@ -5,46 +5,43 @@ import Card from "react-bootstrap/Card";
 
 // Add Music to Credits
 // <https://github.com/goldfire/howler.js>
-
-// import { Howl } from 'howler';
-import VideoEmbed from './VideoEmbed';
-
 import './AboutUs.css';
+import Song from "./song.mp3";
+import {Howl, Howler} from "howler";
 
-// const sound = new Howl({
-//   src: 'public/Assests/fox-ylvis-second-chorus-and-outro.mp3',
-//   html5: true,
-//   format: 'mp3',
-//   volume: 1.0,
-// });
-// console.log(sound);
-// embed video https://www.youtube.com/watch?v=jofNR_WkoCE&ab_channel=discoveryplusNorge
 
 
 class AboutUs extends React.Component {
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     showMusicButton: true,
-  //   }
-  // }
-
-  // removeButton = () => {
-  //   this.setState({ showMusicButton: false })
-  // };
-
-  // playMusic = () => {
-  //   sound.play();
-  //   this.removeButton();
-  //   // console.log("Play the tunes!")
-  // }
-
-  render() {
-
+  SoundPlay = (src) => {
+    const sound = new Howl ({
+      src
+    })
+    sound.play()
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      showMusicButton: true,
+    }
+  }
+    render() {
+    Howler.volume(1.0);
+    
 
     return (
       <>
+        <section id="button-section">
+          {this.state.showMusicButton && <Button id="music-button"
+            onClick={() => {
+              this.SoundPlay(Song);
+            }}
+          >
+            Roll Credits!
+          </Button>
+          }
+        </section>
+
+
         <div id="scroll-container">
           <div id="scroll-text">
             <div id="bio-cards">

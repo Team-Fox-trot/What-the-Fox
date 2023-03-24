@@ -94,29 +94,12 @@ class App extends React.Component {
 
   handleFoxSubmit = (dataFromFoxCarousel) => {
     let newFoxMeme = dataFromFoxCarousel;
-    console.log(newFoxMeme);
     this.postFoxMeme(newFoxMeme);
   }
 
   // Add a function to create a new fox meme 
   postFoxMeme = async (newFoxMeme) => {
     try {
-
-
-      // if (this.props.auth0.isAuthenticated) {
-      //   const res = await this.props.auth0.getIdTokenClaims();
-      //   const jwt = res.__raw;
-      //   const config = {
-      //     method: 'post',
-      //     baseURL: process.env.REACT_APP_SERVER,
-      //     url: '/foxMemes',
-      //     headers: {
-      //       "Authorization": `Bearer ${jwt}`
-      //     }
-      //   }
-      //   let results = await axios(config);
-      //   let foxMemesFromDB = results.data;}
-
 
       let url = `${SERVER}/foxMemes`;
       console.log(newFoxMeme)
@@ -136,10 +119,6 @@ class App extends React.Component {
       let url = `${process.env.REACT_APP_SERVER}/foxMemes/${id}`;
       await axios.delete(url);
       this.foxFromDBtoFav();
-      // let updatedfoxMemes = this.state.foxMemes.filter(i => i._id !== id);
-      // this.setState({
-      //   foxMemes: updatedfoxMemes,
-      // });
     } catch (error) {
 
       console.log('Error: ', error.response.data)
@@ -149,29 +128,16 @@ class App extends React.Component {
 
   updateFoxMeme = async (updateFox) => {
     
+    console.log(updateFox);
     try {
       let updatedFoxFromDB = await axios.put(`${process.env.REACT_APP_SERVER}/foxMemes/${updateFox._id}`, updateFox);
 
-      console.log(updatedFoxFromDB.data);
       this.foxFromDBtoFav();
     } catch (error) {
       console.log('error msg: ', error.response.data)
     }
   }
 
-  /* Add a function to create a new fox meme 
-  postFoxMeme = async (newFoxMeme) => {
-    try {
-      let url = `${SERVER}/foxMemes`;
-      let createdFoxMeme = await axios.post(url, newFoxMeme);
-      this.setState({
-        foxMemes: [...this.state.foxMemes, createdFoxMeme.data]
-      })
-    } catch (error) {
-      console.log('Error: ', error.response.data)
-    }
-  }
-*/
   componentDidMount() {
     this.fiveRandomFoxes();
     // this.foxFromDBtoFav();

@@ -1,13 +1,14 @@
 
+.carousel{
+  height: 400px;
+  width: 500px;
+  margin: auto;
 
-
-
-.caro {
-  text-align: center;
-  align-items: center;
-  padding-top: 30px;
-  padding-bottom: 100px;
 }
 
-
-
+.foxCarouselItem{
+  max-height: 400px;
+  max-width: 400px;
+ border: solid #1f1300 10px; 
+  margin-left: 10%;
+}
