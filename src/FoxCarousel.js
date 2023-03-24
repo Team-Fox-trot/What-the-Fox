@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
 import { useAuth0 } from '@auth0/auth0-react';
+import './FoxCarousel.css'
 import { useNavigate } from "react-router-dom";
 import './FoxCarousel.css'
 
@@ -30,6 +31,7 @@ function FoxCarousel(props) {
     return (
       <Container className='carousel'>
       <Carousel  interval={null} index={index} onSelect={handleSelect}>
+
       <Carousel.Item>
         <img
           className="foxCarouselItem"

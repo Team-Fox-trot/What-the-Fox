@@ -1,6 +1,5 @@
 import React from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-
 class FoxModal extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
@@ -28,11 +27,11 @@ class FoxModal extends React.Component {
           <img src={this.props.memeURL} alt='alttext' />
           <Form onSubmit={this.handleSubmit}>
             <Form.Group controlId="text">
-              <Form.Label>Update the meme text</Form.Label>
+              <Form.Label>What does the Fox want to say now?</Form.Label>
               <Form.Control type="text" placeholder={this.props.text} />
             </Form.Group>
             <Button variant="outline-primary" type="submit">
-                Update this meme
+                Update me
             </Button>
           </Form>
 
@@ -41,7 +40,7 @@ class FoxModal extends React.Component {
             this.props.deleteFoxMeme(this.props.id);
             this.props.closeModal();
           }}
-          >Delete this meme</Button>
+          >Delete this cute Fox :(</Button>
 
         </Modal.Body>
 
