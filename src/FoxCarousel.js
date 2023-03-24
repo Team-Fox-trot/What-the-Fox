@@ -6,6 +6,7 @@ import { Container } from 'react-bootstrap';
 import { useAuth0 } from '@auth0/auth0-react';
 import './FoxCarousel.css'
 import { useNavigate } from "react-router-dom";
+import './FoxCarousel.css'
 
 
 function FoxCarousel(props) {
@@ -14,7 +15,6 @@ function FoxCarousel(props) {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
-    console.log(selectedIndex);
     setIndex(selectedIndex);
   };
   const navigate = useNavigate();
@@ -23,17 +23,18 @@ function FoxCarousel(props) {
     e.preventDefault();
     let newFoxMeme = {
       userInput: props.userInput,
-      imgURL: props.allFoxes[index].src,
+      imgUrl: props.allFoxes[index].src,
     }
     props.handleFoxSubmit(newFoxMeme);
     navigate("/favorites");
   }
     return (
-      <Container className="caro">
-      <Carousel interval={null} index={index} onSelect={handleSelect} >
+      <Container className='carousel'>
+      <Carousel  interval={null} index={index} onSelect={handleSelect}>
+
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="foxCarouselItem"
           src={props.allFoxes[0].src}
           alt="First slide"
         />
@@ -43,7 +44,7 @@ function FoxCarousel(props) {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="foxCarouselItem"
           src={props.allFoxes[1].src}
           alt="Second slide"
         />
@@ -53,7 +54,7 @@ function FoxCarousel(props) {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="foxCarouselItem"
           src={props.allFoxes[2].src}
           alt="Third slide"
         />
@@ -63,7 +64,7 @@ function FoxCarousel(props) {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="foxCarouselItem"
           src={props.allFoxes[3].src}
           alt="Fourth slide"
         />
@@ -73,7 +74,7 @@ function FoxCarousel(props) {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="foxCarouselItem"
           src={props.allFoxes[4].src}
           alt="Fifth slide"
         />

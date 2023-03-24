@@ -9,7 +9,9 @@
 
 div .card {
   width: 250px;
-  margin: 15px;
+  height: 450px;
+  margin: 40px 15px 40px 15px;
+
   align-items: center;
   background-color: #ffc669;
 }

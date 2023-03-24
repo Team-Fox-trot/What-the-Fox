@@ -17,14 +17,16 @@ class Favorites extends React.Component {
     }
   }
 
-  openModal = (id, text, imgURL, v) => {
+  openModal = (id, text, imgUrl, v, memeURL) => {
     this.setState({
       showModal: true,
       id: id,
       text: text,
-      imgURL: imgURL,
+      imgUrl: imgUrl,
       v: v,
+      memeURL: memeURL,
     })
+    console.log(this.state);
   }
 
   closeModal = () => {
@@ -43,7 +45,8 @@ class Favorites extends React.Component {
     (this.props.foxMemes && this.props.foxMemes.length > 0 && console.log(this.props.foxMemes[0]._id));
     let foxCards = this.props.foxMemes.map(i => {
       return <FoxCard
-        imgURL={i.imgURL}
+        memeURL={i.memeURL}
+        imgUrl={i.imgUrl}
         key={i._id}
         id={i._id}
         alt={i.userInput}
@@ -54,7 +57,9 @@ class Favorites extends React.Component {
       />
 
 
-    });
+     
+    }
+    );
     return (
       <>
         <div className='favCard'>{foxCards}</div>
@@ -67,7 +72,8 @@ class Favorites extends React.Component {
           text={this.state.text}
           id={this.state.id}
           v={this.state.v}
-          imgURL={this.state.imgURL}
+          imgUrl={this.state.imgUrl}
+          memeURL={this.state.memeURL}
         />
       </>
     )

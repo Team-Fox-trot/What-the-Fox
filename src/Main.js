@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 
 import FoxCarousel from './FoxCarousel';
+import './Main.css'
 
 class Main extends React.Component {
   constructor(props) {
