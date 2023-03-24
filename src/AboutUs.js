@@ -26,14 +26,14 @@ class AboutUs extends React.Component {
   }
     render() {
     Howler.volume(1.0);
-    this.SoundPlay(Song);
+    
 
     return (
       <>
         <section id="button-section">
           {this.state.showMusicButton && <Button id="music-button"
             onClick={() => {
-              
+              this.SoundPlay(Song);
             }}
           >
             Roll Credits!
