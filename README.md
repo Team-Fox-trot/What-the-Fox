@@ -20,8 +20,6 @@
 * As a user, I want to select a fox meme that I have created, and then edit that fox meme. 
 * As a user, I want to be able to delete fox memes that I no longer want saved to my collection. 
 
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
 
@@ -37,9 +35,8 @@
 ![wtf-wireframe](https://user-images.githubusercontent.com/123340286/226435021-4f1298ec-3626-4a21-b914-e67832bcad8b.jpg)
 ![wtf-UML](https://photos.app.goo.gl/1sMQpw2zNaLC9eQL9)
 
-## Change Log
 
-## Links and Resources
+## Links
 
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
+* [Live](https://whatthefox.netlify.app/)
+
