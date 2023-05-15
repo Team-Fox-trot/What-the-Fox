@@ -32,7 +32,11 @@
 * Languages used: Javascript, CSS
 
 ## Screenshots
+
+- Homepage
 ![homepage after login](https://github.com/Team-Fox-trot/What-the-Fox/assets/120158188/e8f4714d-55cf-430b-82f7-6e73c1603ccf)
+
+- Users' Memes
 ![fav memes](https://github.com/Team-Fox-trot/What-the-Fox/assets/120158188/ba0c0352-9744-4f2f-963a-28a63b32fdb0)
 
 ## Design Prep
