@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Main from './pages/Main';
 import './components/Header/Header.css'
-import Favorites from './pages/Collection';
+import Collection from './pages/Collection';
 import Aboutus from './pages/AboutUs'
 import Spinner from './components/Spinner';
 import { withAuth0 } from '@auth0/auth0-react';
@@ -178,7 +178,7 @@ class App extends React.Component {
 
             <Route
               exact path="/favorites"
-              element={this.props.auth0.isAuthenticated ? <Favorites
+              element={this.props.auth0.isAuthenticated ? <Collection
                 foxMemes={this.state.foxMemes}
                 deleteFoxMeme={this.deleteFoxMeme}
                 updateFoxMeme={this.updateFoxMeme}

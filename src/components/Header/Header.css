@@ -1,24 +1,18 @@
-
 .color-nav {
-   
   background-color: #3d1306;
   color: black;
   width: 50%;
-  
 }
 
 .container {
-  
-  background-color: ##3d1306;
-  color: black
-  
+  background-color: #3d1306;
+  color: black;
 }
 
 #root {
-  background-color: #3d1306; 
+  background-color: #3d1306;
   width: 100%;
   padding-bottom: 3rem;
-
 }
 
 body {
@@ -29,8 +23,16 @@ body {
   background-color: #3d1306;
 }
 
-
 a.nav-link:hover {
-  color: rgb(255, 196, 0)
+  color: rgb(255, 196, 0);
 }
 
+.logout-container {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  color: rgb(255, 235, 211); /* or any other color that matches other text */
+  margin-right: 10px; /* space between username and logout button */
+}

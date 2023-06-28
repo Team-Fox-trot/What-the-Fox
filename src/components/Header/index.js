@@ -15,7 +15,7 @@ class Header extends React.Component {
         <Container>
           <Nav className="color-nav">
             <Nav.Link href="/">Home</Nav.Link>
-            {this.props.auth0.isAuthenticated && <Nav.Link href="/favorites">Faves</Nav.Link>}
+            {this.props.auth0.isAuthenticated && <Nav.Link href="/favorites">Collection</Nav.Link>}
             <Nav.Link href="/aboutus">About Us</Nav.Link>
             {this.props.auth0.isAuthenticated ? <Logout/> : <Login/>}
           </Nav>
