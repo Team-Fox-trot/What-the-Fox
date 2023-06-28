@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import Header from './Header';
-import Footer from './Footer';
-import Main from './Main';
-import './Header.css'
-import Favorites from './Favorites';
-import Aboutus from './AboutUs'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Main from './pages/Main';
+import './components/Header/Header.css'
+import Favorites from './pages/Collection';
+import Aboutus from './pages/AboutUs'
+import Spinner from './components/Spinner';
 import { withAuth0 } from '@auth0/auth0-react';
 import './App.css';
 
@@ -32,7 +33,9 @@ class App extends React.Component {
       allFoxes: [],
       foxMemes: [],
       userInput: '',
-      musicButton: true
+      musicButton: true,
+      isLoading: true // Add isLoading state
+
     }
   }
 
@@ -54,7 +57,8 @@ class App extends React.Component {
       randomFoxesArray.push(randomFox);
     }
     this.setState({
-      allFoxes: randomFoxesArray
+      allFoxes: randomFoxesArray,
+      isLoading: false // Set isLoading to false after fetching data
     })
   };
 
@@ -144,8 +148,15 @@ class App extends React.Component {
   }
 
   render() {
-
-    // this will probably be moved to carousel component?
+    if (this.state.isLoading) {
+      return (
+        <div className="loading-container">
+          <Spinner />
+          <div className="loading-text">Loading...</div>
+        </div>
+      );
+    }
+  
     return (
       <>
           <Header />

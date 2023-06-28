@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { withAuth0 } from '@auth0/auth0-react';
-import Login from './Login';
-import Logout from './Logout';
+import Login from '../Login';
+import Logout from '../Logout';
 
 class Header extends React.Component {
 
