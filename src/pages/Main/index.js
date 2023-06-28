@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
-import FoxCarousel from './FoxCarousel';
+import FoxCarousel from '../../components/FoxCarousel';
 import './Main.css'
 
 class Main extends React.Component {

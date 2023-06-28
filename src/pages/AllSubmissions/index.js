@@ -1,7 +1,7 @@
 import React from 'react';
 import { withAuth0 } from "@auth0/auth0-react";
-import FoxModal from './FoxModal';
-import FoxCard from './FoxCard';
+import FoxModal from '../../components/FoxModal';
+import FoxCard from '../../components/FoxCard';
 import './Favorites.css';
 
 
