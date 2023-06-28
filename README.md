@@ -14,14 +14,16 @@
 * The user will have the ability to save, update, and delete their collection of fox memes.
 * The user is encouraged to think outside the box, but never outside the fox ;)
 
+## Links
+- Website: <https://whatthefox.netlify.app/>
+- Frontend: <https://github.com/Team-Fox-trot/What-the-Fox>
+- Backend: <https://github.com/Team-Fox-trot/What-the-Fox-back-end>
+
 ## User Stories
 * As a user, I want to be able to see a collection of fox images, pick the one I want to add text to, then add text to that image. 
 * As a user, I want to be able to login and see the collection of fox memes I've saved.
 * As a user, I want to select a fox meme that I have created, and then edit that fox meme. 
 * As a user, I want to be able to delete fox memes that I no longer want saved to my collection. 
-
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
 
@@ -29,17 +31,21 @@
 * React Bootstrap components used: Carousel, Card probably, update this later
 * Languages used: Javascript, CSS
 
-## Database Schema Diagram
+## Screenshots
 
-![data-schema](https://photos.app.goo.gl/oPkuXKsp53ysStf8A)
+- Homepage
+![homepage after login](https://github.com/Team-Fox-trot/What-the-Fox/assets/120158188/e8f4714d-55cf-430b-82f7-6e73c1603ccf)
+
+- Meme Collection
+![fav memes](https://github.com/Team-Fox-trot/What-the-Fox/assets/120158188/ba0c0352-9744-4f2f-963a-28a63b32fdb0)
+
 ## Design Prep
 
+- Wireframe
 ![wtf-wireframe](https://user-images.githubusercontent.com/123340286/226435021-4f1298ec-3626-4a21-b914-e67832bcad8b.jpg)
-![wtf-UML](https://photos.app.goo.gl/1sMQpw2zNaLC9eQL9)
 
-## Change Log
+- Frontend
+![frontend](https://github.com/Team-Fox-trot/What-the-Fox/assets/120158188/ad9a3ec1-bdd5-4408-ac79-3e5b786cbf5d)
 
-## Links and Resources
-
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
+- Backend
+![backend](https://github.com/Team-Fox-trot/What-the-Fox/assets/120158188/dab3921c-7c3a-46ef-ad3a-cfc3b694d5f9)

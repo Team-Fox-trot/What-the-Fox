@@ -1,1 +1,22 @@
+/* 
+.loading-image {
+  animation: spin 2s linear infinite;
+  display: block;
+  margin: 0 auto;
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  animation: blink 1s linear infinite;
+  text-align: center;
+  font-size: 20px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+} */
